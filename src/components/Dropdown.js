@@ -18,7 +18,7 @@ function Dropdown({ options, value, onChange }) {
                 setIsOpen(false);
             }
         }
-        document.addEventListener('click', handler, true)
+        document.addEventListener('click', handler,true)
         //cleanup function to clean previous data
         return () => {
             document.removeEventListener('click', handler)
@@ -49,7 +49,8 @@ function Dropdown({ options, value, onChange }) {
 
     return (<div ref={divEl} className="w-48 relative">
 
-        <Panel className="flex justify-between items-center cursor-pointer " onClick={handleClick}> {value?.label || 'Select...'}
+        <Panel className="flex justify-between items-center cursor-pointer " onClick={handleClick}> 
+            {value?.label || 'Select...'}
             <GoChevronDown className="text-lg" />
         </Panel>
         {isOpen && <Panel className="absolute top-full ">{renderedOptions}</Panel>

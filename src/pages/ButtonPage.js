@@ -3,10 +3,10 @@ import {GoBell,GoCloudDownload,GoDatabase} from 'react-icons/go'
 
 function ButtonPage(){
 const handleClick =()=>{
-console.log('Click!1')
 }
 
-    return <div>
+    return(
+     <div>
   <div>
     <Button primary className="mb-5" onClick={handleClick}><GoBell/>
     Click here</Button>
@@ -27,7 +27,7 @@ console.log('Click!1')
     <Button danger outline> See Deals!</Button>
   </div>
 
-    </div>
+    </div>)
 }
 
 export default ButtonPage;
